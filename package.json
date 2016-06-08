@@ -2,13 +2,19 @@
   "name": "new.js",
   "version": "0.1.0",
   "description": "Initialize your package",
-  "main": "lib/new.js",
+  "bin": {
+    "new": "lib/new.js",
+    "npm-new": "lib/new.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/LestaD/new.js.git"
+  },
+  "engines": {
+    "node": ">= 4"
   },
   "keywords": [
     "init",
@@ -30,6 +36,7 @@
     "chalk": "^1.1.3",
     "git-config": "0.0.7",
     "inquirer": "^1.0.3",
+    "lodash": "^4.13.1",
     "optimist": "^0.6.1"
   }
 }

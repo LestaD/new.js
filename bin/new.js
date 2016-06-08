@@ -13,16 +13,19 @@ const Package = require('../package.json');
 
 
 const argv = optimist
-  .usage('Usage: new [options]\n       npm-new [options]')
+  .usage('Usage: new [options]\n       new.js [options]\n       npm-new [options]')
 
   .describe('h', 'Show help and usage information')
   .alias('h', 'help')
   .boolean('h')
 
   .describe('v', 'Show new.js version')
-  .alias('v', 'version')
   .alias('v', 'ver')
   .boolean('v')
+
+  .describe('f', 'Non interactive, use defaults')
+  .alias('f', 'force')
+  .boolean('f')
 
   .describe('name', 'Set package name')
   .string('name')
@@ -31,25 +34,26 @@ const argv = optimist
   .string('version')
   .default('version', '0.1.0')
 
-  .describe('repo', 'Git repository')
+  .describe('repo', 'Git repository (lestad/new.js)')
   .string('repo')
 
-  .describe('author', 'Your name and email: John Snow <john.snow@nord.net>')
-  .string('author')
+  .describe('bin', 'Create exec file ./bin/$name.js')
+  .boolean('bin')
+  .alias('bin', 'b')
+  .default('bin', false)
 
-  .describe('keywords', '')
-
-  .describe('exec', 'Create exec file ./bin/$name.js')
-  .boolean('exec')
-
-  .describe('no-lib', 'Do not create library main file')
-  .boolean('no-lib')
+  .describe('main', 'Create library main file')
+  .boolean('main')
+  .alias('main', 'm')
+  .default('main', true)
 
   .describe('lic', 'Select license')
+  .alias('lic', 'license')
   .default('lic', 'MIT')
 
-  .describe('skip-git', 'Do not initialize git repository')
-  .boolean('skip-git')
+  .describe('git', 'Initialize git repository')
+  .boolean('git')
+  .alias('git', 'g')
 
   .argv;
 
@@ -60,7 +64,7 @@ if (argv.help) {
   process.exit(0);
 }
 
-if (argv.version) {
+if (argv.ver) {
   console.log(`${Package.name} v${Package.version}`);
   process.exit(0);
 }

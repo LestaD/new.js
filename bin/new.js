@@ -9,7 +9,7 @@ const { pick, assign } = require('lodash');
 
 const Package = require('../package.json');
 const defaults = require('../lib/defaults');
-const { askUser } = require('../lib/questions');
+const { init, askUser } = require('../lib/questions');
 
 
 const argv = optimist
@@ -71,8 +71,6 @@ if (argv.ver) {
 const normalizedArgs = pick(argv, ['name', 'version', 'repo', 'bin', 'main', 'license', 'git']);
 let config = assign({}, defaults, normalizedArgs);
 
-if (!argv.force) {
-  config = askUser(config);
-}
-
-console.log(config);
+init(config)
+.then(argv.force ? a => a : askUser)
+.then(config => console.log('Generate from:', config));

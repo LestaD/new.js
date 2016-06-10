@@ -38,6 +38,7 @@
     "git-config": "0.0.7",
     "init-package-json": "^1.9.4",
     "inquirer": "^1.0.3",
+    "license.js": "^1.0.0",
     "lodash": "^4.13.1",
     "optimist": "^0.6.1",
     "validate-npm-package-license": "^3.0.1",

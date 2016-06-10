@@ -1,47 +1,48 @@
 {
-  "name": "new.js",
-  "version": "0.1.0",
-  "description": "Initialize your package",
-  "bin": {
-    "new": "lib/new.js",
-    "new.js": "lib/new.js",
-    "npm-new": "lib/new.js"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/LestaD/new.js.git"
-  },
-  "engines": {
-    "node": ">= 4"
-  },
-  "keywords": [
-    "init",
-    "package",
-    "npm",
-    "json",
-    "readme",
-    "license",
-    "source",
-    "generate"
-  ],
-  "author": "Sergey Sova <i.am@lestad.net> (https://lestad.top)",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/LestaD/new.js/issues"
-  },
-  "homepage": "https://github.com/LestaD/new.js#readme",
-  "dependencies": {
-    "chalk": "^1.1.3",
-    "git-config": "0.0.7",
-    "init-package-json": "^1.9.4",
-    "inquirer": "^1.0.3",
-    "license.js": "^1.0.0",
-    "lodash": "^4.13.1",
-    "optimist": "^0.6.1",
-    "validate-npm-package-license": "^3.0.1",
-    "validate-npm-package-name": "^2.2.2"
-  }
+	"name": "new.js",
+	"version": "0.1.0",
+	"description": "Initialize your package",
+	"bin": {
+		"new": "lib/new.js",
+		"new.js": "lib/new.js",
+		"npm-new": "lib/new.js"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/LestaD/new.js.git"
+	},
+	"engines": {
+		"node": ">= 4"
+	},
+	"keywords": [
+		"init",
+		"package",
+		"npm",
+		"json",
+		"readme",
+		"license",
+		"source",
+		"generate"
+	],
+	"author": "Sergey Sova <i.am@lestad.net> (https://lestad.top)",
+	"license": "GPL-3.0",
+	"bugs": {
+		"url": "https://github.com/LestaD/new.js/issues"
+	},
+	"homepage": "https://github.com/LestaD/new.js#readme",
+	"dependencies": {
+		"chalk": "^1.1.3",
+		"git-config": "0.0.7",
+		"init-package-json": "^1.9.4",
+		"inquirer": "^1.0.3",
+		"license.js": "1.1.*",
+		"lodash": "^4.13.1",
+		"observatory": "^1.0.0",
+		"optimist": "^0.6.1",
+		"validate-npm-package-license": "^3.0.1",
+		"validate-npm-package-name": "^2.2.2"
+	}
 }

@@ -40,4 +40,8 @@ new -bmtg --name=hello-world --version=0.0.1 --lic=GPL-3.0
 - dependencies
 - devDependencies
 - executive or/and library
-- readme selector -->
+- readme selector
+
+Add license header to demo files (main, bin, test)
+
+-->

@@ -3,9 +3,9 @@
   "version": "0.1.0-development.1",
   "description": "Initialize your package",
   "bin": {
-    "new": "lib/new.js",
-    "new.js": "lib/new.js",
-    "npm-new": "lib/new.js"
+    "new": "bin/new.js",
+    "new.js": "bin/new.js",
+    "npm-new": "bin/new.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

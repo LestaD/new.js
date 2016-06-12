@@ -15,7 +15,7 @@ const generates = require('../lib/generates');
 
 Promise.resolve(defaults)
 .then(def => config(def, commandLine(def)))
-.then(conf => pipe(conf, 'Generate from:', conf))
+// .then(conf => pipe(conf, 'Generate from:', conf))
 .then(questions)
 .then(conf => pipe(conf, chalk.gray('Create generators!')))
 .then(generates)

@@ -17,7 +17,7 @@ Promise.resolve(defaults)
 .then(def => config(def, commandLine(def)))
 // .then(conf => pipe(conf, 'Generate from:', conf))
 .then(questions)
-.then(conf => pipe(conf, chalk.gray('Create generators!')))
+// .then(conf => pipe(conf, chalk.gray('Create generators!')))
 .then(generates)
 .catch(err => console.error(err));
 

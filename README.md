@@ -4,6 +4,9 @@
 
 Easy generates the skeleton of your new NPM-package.
 
+[![](https://asciinema.org/a/48638.png)](https://asciinema.org/a/48638)
+
+
 ## Installation
 
 ```bash

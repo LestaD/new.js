@@ -2,30 +2,29 @@
 
 const fs = require('fs');
 const path = require('path');
-
 const chalk = require('chalk');
-const { pick, assign } = require('lodash');
 
 const Package = require('../package.json');
-const commandLine = require('../lib/commandline');
+
 const defaults = require('../lib/defaults');
+const commandLine = require('../lib/commandline');
+const config = require('../lib/config');
 const questions = require('../lib/questions');
 const generates = require('../lib/generates');
 
-const argv = commandLine(defaults);
 
-const normalizedArgs = pick(argv, [
-  'name',
-  'version',
-  'repo',
-  'bin',
-  'main',
-  'license',
-  'git'
-]);
-let config = assign({}, defaults, normalizedArgs);
+Promise.resolve(defaults)
+.then(def => config(def, commandLine(def)))
+.then(conf => pipe(conf, 'Generate from:', conf))
+.then(questions)
+.then(conf => pipe(conf, chalk.gray('Create generators!')))
+.then(generates)
+.catch(err => console.error(err));
 
-Promise.resolve(config)
-.then(argv.force ? a => a : questions)
-// .then(config => console.log('Generate from:', config))
-.then(generates);
+
+
+
+function pipe(first, text, arg1, arg2, arg3) {
+  console.log.apply(console, [text, arg1, arg2, arg3]);
+  return first;
+}

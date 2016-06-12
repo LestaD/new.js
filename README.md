@@ -26,6 +26,22 @@ new -bmtg --name=hello-world --version=0.0.1 --lic=GPL-3.0
 
 - Node.js >= 4.0.0
 
+
+## Roadmap
+
+- Plugins (questions, generators)
+- Restart latest generation (`new --latest`)
+- Continue from break (`new --continue`)
+
+
+### Plugins
+
+```bash
+npm install --global new-react-app.js
+new react-app
+```
+
+
 <!-- ## Questions
 
 - name

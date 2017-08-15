@@ -13,18 +13,16 @@ const questions = require('../lib/questions');
 const generates = require('../lib/generates');
 
 
-Promise.resolve(defaults)
-.then(def => config(def, commandLine(def)))
-// .then(conf => pipe(conf, 'Generate from:', conf))
-.then(questions)
-// .then(conf => pipe(conf, chalk.gray('Create generators!')))
-.then(generates)
-.catch(err => console.error(err));
-
-
-
-
-function pipe(first, text, arg1, arg2, arg3) {
-  console.log.apply(console, [text, arg1, arg2, arg3]);
-  return first;
+async function main() {
+  try {
+    const options = config(defaults, commandLine(defaults))
+    const answers = await questions(options)
+    const results = await generates(answers)
+  }
+  catch (error) {
+    console.error(chalk.red(error.message))
+    console.error(chalk.yellow(error.stack))
+  }
 }
+
+main()

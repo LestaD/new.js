@@ -39,7 +39,7 @@
     "git-config": "0.0.7",
     "hosted-git-info": "^2.1.5",
     "init-package-json": "^1.9.4",
-    "inquirer": "^3.2.1",
+    "inquirer": "^3.2.2",
     "license.js": "1.1.*",
     "lodash": "^4.13.1",
     "observatory": "^1.0.0",

@@ -1,6 +1,6 @@
 {
   "name": "new.js",
-  "version": "0.1.0-development.1",
+  "version": "0.1.0-development.2",
   "description": "Initialize your package",
   "bin": {
     "new": "bin/new.js",

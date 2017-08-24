@@ -15,7 +15,7 @@
     "url": "git+ssh://git@github.com/LestaD/new.js.git"
   },
   "engines": {
-    "node": ">= 8"
+    "node": "7.10.* || 8.*"
   },
   "keywords": [
     "init",

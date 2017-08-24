@@ -18,6 +18,8 @@ async function main() {
     const options = config(defaults, commandLine(defaults))
     const answers = await questions(options)
     const results = await generates(answers)
+
+    console.log({ answers })
   }
   catch (error) {
     console.error(chalk.red(error.message))

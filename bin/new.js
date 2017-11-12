@@ -19,7 +19,7 @@ async function main() {
     const answers = await questions(options)
     const results = await generates(answers)
 
-    console.log({ answers, results })
+    // console.log({ answers, results })
   }
   catch (error) {
     /* eslint-disable no-console */

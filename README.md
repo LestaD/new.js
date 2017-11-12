@@ -27,13 +27,13 @@ new -bmtg --name=hello-world --version=0.0.1 --lic=GPL-3.0
 
 ## Requirements
 
-- Node.js >= 4.0.0
+- Node.js >= 6.0.0
 
 
 ## Roadmap
 
 - Plugins (questions, generators)
-- Restart latest generation (`new --latest`)
+- Restart previous generation (`new --previous`)
 - Continue from break (`new --continue`)
 
 

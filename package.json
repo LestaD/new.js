@@ -40,7 +40,7 @@
     "hosted-git-info": "^2.1.5",
     "init-package-json": "^1.9.4",
     "inquirer": "^3.3.0",
-    "license.js": "^2.0.0",
+    "license.js": "^2.1.0",
     "lodash": "^4.13.1",
     "observatory": "^1.0.0",
     "optimist": "^0.6.1",

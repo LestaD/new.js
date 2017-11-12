@@ -11,13 +11,17 @@ Easy generates the skeleton of your new NPM-package.
 
 ```bash
 npm install --global new.js
+# or
+npm i -g new.js
 ```
 
 ## Usage
 
 ```bash
 new --help
+#or
 new.js -h
+#or
 npm-new -h
 ```
 

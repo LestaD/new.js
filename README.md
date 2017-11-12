@@ -4,7 +4,7 @@
 
 Easy generates the skeleton of your new NPM-package.
 
-[![](https://asciinema.org/a/48638.png)](https://asciinema.org/a/48638)
+[![](https://asciinema.org/a/134869.png)](https://asciinema.org/a/134869)
 
 
 ## Installation

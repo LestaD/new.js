@@ -44,6 +44,14 @@ npm install --global new-react-app.js
 new react-app
 ```
 
+### Presets (bundled)
+
+```bash
+npm install --global new.js
+new flow # create with flow boilerplate
+new babel # babel plugins and presets
+```
+
 
 <!-- ## Questions
 
@@ -58,7 +66,7 @@ new react-app
 - init git
 - dependencies
 - devDependencies
-- executive or/and library
+- executive or/and library, tests
 - readme selector
 
 Add license header to demo files (main, bin, test)

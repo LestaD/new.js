@@ -36,6 +36,7 @@ new -bmtg --name=hello-world --version=0.0.1 --lic=GPL-3.0
 
 ## Roadmap
 
+- Add question to crate man and doc files https://github.com/npm/npm/blob/fb28e5868a9dbbe21a15f23fe8cf8b3703e8adf2/package.json#L28
 - Plugins (questions, generators)
 - Restart previous generation (`new --previous`)
 - Continue from break (`new --continue`)

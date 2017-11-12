@@ -8,7 +8,7 @@
     "npm-new": "bin/new.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -34,18 +34,22 @@
   },
   "homepage": "https://github.com/LestaD/new.js#readme",
   "dependencies": {
-    "chalk": "^2.1.0",
+    "chalk": "^2.3.0",
     "change-case": "^3.0.1",
     "git-config": "0.0.7",
     "hosted-git-info": "^2.1.5",
     "init-package-json": "^1.9.4",
-    "inquirer": "^3.2.2",
-    "license.js": "1.1.*",
+    "inquirer": "^3.3.0",
+    "license.js": "^2.0.0",
     "lodash": "^4.13.1",
     "observatory": "^1.0.0",
     "optimist": "^0.6.1",
     "semver": "^5.4.1",
     "validate-npm-package-license": "^3.0.1",
     "validate-npm-package-name": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.11.0",
+    "eslint-config-atomix-base": "^4.6.0"
   }
 }

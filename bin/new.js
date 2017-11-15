@@ -1,25 +1,29 @@
 #!/usr/bin/env node
 
-// const fs = require('fs')
-// const path = require('path')
 const chalk = require('chalk')
+const { Core } = require('../lib/core')
 
-// const Package = require('../package.json')
-
-const defaults = require('../lib/defaults')
-const commandLine = require('../lib/command-line')
-const config = require('../lib/config')
-const questions = require('../lib/questions')
-const generates = require('../lib/generates')
+const { getArguments } = require('../lib/command-line')
+const { initialCheck } = require('../lib/initial-check')
 
 
 async function main() {
   try {
-    const options = config(defaults, commandLine(defaults))
-    const answers = await questions(options)
-    const results = await generates(answers)
+    const args = getArguments()
+    const core = new Core(args)
 
-    // console.log({ answers, results })
+    const wrapAborted = (result) => {
+      if (!result) {
+        core.log.info('Aborted')
+        process.exit(0)
+      }
+    }
+
+    core.log.info('Let\'s get started!\n')
+
+    wrapAborted(await initialCheck(core))
+
+    await core.enqueueActions()
   }
   catch (error) {
     /* eslint-disable no-console */
